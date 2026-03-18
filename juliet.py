@@ -72,7 +72,7 @@ if __name__ == "__main__":
         exit()
 
     for subdir in os.listdir(testcases):
-        match = re.search("^CWE(\d+)", subdir)
+        match = re.search(r"^CWE(\d+)", subdir)
         if match != None:
             parsed_CWE = int(match.group(1))
             if (parsed_CWE in args.CWEs) or args.all:
